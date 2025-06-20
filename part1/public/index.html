@@ -14,9 +14,17 @@
         </button>
         <img src="e" v-if="dogUrl" :src="dogUrl" alt="dog of the day">
     </div>
+    <script>
+        const { createApp } = Vue;
+
+        createApp({
+            data() {
+                return {
+                    dogUrl: '',
+                    loading: false
+                };
+            },
+           
+    </script>
 </body>
 </html>
-<script>
-    document.getElementById('getDogButton').addEventListener('click', function() {
-        fetch('/getDog')
-</script>
