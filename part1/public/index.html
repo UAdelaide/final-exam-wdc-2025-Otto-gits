@@ -24,8 +24,8 @@
         <img :src="dogUrl" alt="dog of the day">
         <hr>
         <button type="button" h-ref="/api/walkers/summary">Go to dog walkers summary</button>
-        <button type="button" on-click="/api/walkrequests/open">Go to open walk requests</button>
-        <button type="button" on-click="/api/dogs">Go to dog information</button>
+        <button type="button" h-ref="/api/walkrequests/open">Go to open walk requests</button>
+        <button type="button" h-ref="/api/dogs">Go to dog information</button>
     </div>
     <script>
         const { createApp } = Vue;
