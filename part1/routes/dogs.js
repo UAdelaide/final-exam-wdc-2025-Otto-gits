@@ -8,4 +8,6 @@ router.get('/dogs', async (req, res) => {
     res.json(rows);
 });
 
+router.get('')
+
 module.exports = router;
