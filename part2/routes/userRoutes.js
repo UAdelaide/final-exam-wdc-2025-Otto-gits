@@ -36,7 +36,6 @@ router.get('/me', (req, res) => {
 });
 
 router.post('/login', async (req, res) => {
-  console.log(req.body);
   const { username, password } = req.body;
 
   try {
@@ -58,7 +57,6 @@ router.post('/login', async (req, res) => {
     return res.redirect('/owner-dashboard.html');
 
   } catch (error) {
-    console.error('Login error:', error);
     res.status(500).json({ error: 'Login failed' });
   }
 });
