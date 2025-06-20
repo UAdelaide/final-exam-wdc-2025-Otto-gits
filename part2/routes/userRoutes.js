@@ -72,7 +72,8 @@ router.post('/logout', (req, res) => {
 
 router.get('/dogs/mine', async (req, res) => {
   const rows = await db.query(`
-    SELECT d.dog_id, 
+    SELECT
+    d.name
 }
 
 
