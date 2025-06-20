@@ -9,6 +9,8 @@
 <body>
     <h1>Dog of The Day</h1>
     <button @click="getDog" :disabled="loading">
+        {{ loading ? 'Fetching…' : 'Get Dog' }}
+    </button>
 </body>
 </html>
 <script>
