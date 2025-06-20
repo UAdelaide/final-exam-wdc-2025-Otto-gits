@@ -32,7 +32,9 @@ router.get('/walkrequests/open', async (req, res) => {
         `);
     res.json(rows);
 });
-router.get('/walkrequests/open', async (req, res) => {
+
+
+router.get('/walkers/summary', async (req, res) => {
     const [rows] = await db.query(`
         SELECT
         rq.request_id,
