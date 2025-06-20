@@ -64,7 +64,7 @@
           }
         }
 
-        async function applyToWalk() {
+        async function applyToWalk(req) {
           try {
             const res = await fetch(`/api/walks/apply`, {
               method: 'POST',
