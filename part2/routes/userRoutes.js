@@ -70,7 +70,9 @@ router.post('/logout', (req, res) => {
   return res.redirect('/');
 });
 
-router.get('/dogs/mine', async (req, res) 
+router.get('/dogs/mine', async (req, res) => {
+  const rows = 
+}
 
 
 module.exports = router;
