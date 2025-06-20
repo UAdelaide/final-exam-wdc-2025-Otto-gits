@@ -89,7 +89,7 @@
 
         onMounted(() => {
           loadWalkRequests();
-          user.value = await getCurrentUser();
+          user.value = getCurrentUser();
         });
 
         return {
