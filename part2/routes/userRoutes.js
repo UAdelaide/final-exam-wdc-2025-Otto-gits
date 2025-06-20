@@ -79,7 +79,7 @@ router.get('/myDogs', async (req, res) => {
     FROM
     Dogs
     WHERE owner_id = ?
-  `, [req.session.userId]);
+  `, [req.session.user.user_id]);
   res.json(rows);
 });
 
