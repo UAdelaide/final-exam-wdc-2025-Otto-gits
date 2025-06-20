@@ -70,7 +70,7 @@ router.post('/logout', (req, res) => {
   return res.redirect('/');
 });
 
-router.get('/dogs/mine', async (req, res) => {
+router.get('/myDogs', async (req, res) => {
   const rows = await db.query(`
     SELECT
     name
