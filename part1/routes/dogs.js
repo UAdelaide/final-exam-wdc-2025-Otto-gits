@@ -8,6 +8,6 @@ router.get('/dogs', async (req, res) => {
     res.json(rows);
 });
 
-router.get('')
+router.get('/walkrequests/open', async (req, res) =>)
 
 module.exports = router;
