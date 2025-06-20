@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 require('dotenv').config();
+// get the session middleware
 const session = require('express-session');
 
 
