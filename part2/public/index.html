@@ -57,12 +57,13 @@
     createApp({
       setup() {
         const allDogs = ref([]);
-        
+
         async function getAllDogs() {
           try {
             const res = await fetch('/api/user/allDogs')
             allDogs.value = await res.json();
-            for(int i = 0; i < allDogs.value.length; i++){
+            await Promise.all(allDogs.value.map(async (dog) => {
+              try{}
               dogImages.value.push(await fetch('https://dog.ceo/api/breeds/image/random'));
             }
           } catch (error) {
