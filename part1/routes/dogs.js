@@ -39,7 +39,8 @@ router.get('/walkers/summary', async (req, res) => {
         SELECT
         u.username AS walker_username,
         COUNT(r.rating_id) AS total_ratings,
-        ROUND
+        AVG(r.rating) AS average_rating,
+        COUNT(DISTINCT rq.request_id) AS total_walk_requests,
 
         `);
     res.json(rows);
