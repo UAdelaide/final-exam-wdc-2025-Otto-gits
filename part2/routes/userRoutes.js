@@ -70,7 +70,7 @@ router.post('/logout', (req, res) => {
 });
 
 router.get('/myDogs', async (req, res) => {
-  if (!req.session.userId) return res.status(401).json({ error: 'Not logged in' });
+  if (!req.session.user) return res.status(401).json({ error: 'Not logged in' });
   const [rows] = await db.query(`
     SELECT
     dog_id,
