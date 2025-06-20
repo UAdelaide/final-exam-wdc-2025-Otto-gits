@@ -23,7 +23,8 @@
                     loading: false
                 };
             },
-            methods mounted(){
+            methods:
+            async getDog(){
                 const dogUrl = fetch('https://dog.ceo/api/breeds/image/random');
             }
         })
