@@ -66,7 +66,7 @@
 
         async function getAllDogs() {
           try {
-            const res = await fetch('/api/user/allDogs')
+            const res = await fetch('/api/users/allDogs')
             allDogs.value = await res.json();
             await Promise.all(allDogs.value.map(async (dog) => {
               try{
