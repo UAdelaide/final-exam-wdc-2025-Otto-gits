@@ -63,7 +63,7 @@
             const res = await fetch('/api/user/allDogs')
             allDogs.value = await res.json();
             for(int i = 0; i < allDogs.value.length; i++){
-              dogImages.value.push()
+              dogImages.value.push(await fetch('https://dog.ceo/api/breeds/image/random'));
             }
           } catch (error) {
             console.error(error);
