@@ -43,7 +43,9 @@ router.get('/walkers/summary', async (req, res) => {
         COUNT(DISTINCT wr.request_id) AS completed_walks,
         FROM Users u
         LEFT JOIN WalkApplications wa
-            ON wa.walker_id = wr.walker_id AND wr.status = 'completed'
+            ON wa.walker_id = u.user_id
+            AND wa.status = 'accepted'
+        
 
         `);
     res.json(rows);
