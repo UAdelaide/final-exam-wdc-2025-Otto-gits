@@ -4,12 +4,12 @@ var db = require('../db');
 
 
 router.get('/dogs', async (req, res) => {
-    const [rows] = await db.query('SELECT d.name, d.size, u.username FROM Dogs d JOIN Users u ON d.owner_id = u.user_id');
+    const [rows] = await db.query(`SELECT d.name, d.size, u.username FROM Dogs d JOIN Users u ON d.owner_id = u.user_id');
     res.json(rows);
 });
 
 router.get('/walkrequests/open', async (req, res) => {
-    const [rows] = await db.query('
+    const [rows] = await db.query(`
         SELECT
         rq.request_id,
         d.name,
@@ -20,8 +20,8 @@ router.get('/walkrequests/open', async (req, res) => {
         FROM WalkRequests rq
         JOIN Dogs d ON rq.dog_id = d.dog_id
         JOIN Users u ON d.owner_id = u.user_id
-        WHERE rq.status = "open"
-        );
+        WHERE rq.status = 'open'
+        `);
     res.json(rows);
 });
 
