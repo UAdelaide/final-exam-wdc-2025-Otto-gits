@@ -52,6 +52,7 @@ router.post('/login', async (req, res) => {
     const user = rows[0];
     req.session.userId = user.user_id;
     req.session.role = user.role;
+    // redirect based on role
 
     if (user.role === 'walker') {
       return res.redirect('/walker-dashboard.html');
