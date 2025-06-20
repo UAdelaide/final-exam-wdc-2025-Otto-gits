@@ -47,8 +47,11 @@ router.post('/login', async (req, res) => {
     if (rows.length === 0) {
       return res.status(401).json({ error: 'Invalid credentials' });
     }
+
     if (rows[3] === 'walker'){
       window.location.href = '/walker-dashboard.html';
+    }else if (rows[3] === 'owner'){
+      window.location.href = '/owner-dashboard.html';
     }
 
     return res.json({ message: 'Login successful', user: rows[0] });
