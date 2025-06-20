@@ -15,15 +15,15 @@
         <img v-if="dogUrl" :src="dogUrl" alt="dog of the day">
     </div>
     <script>
-        const { createApp, ref } = Vue;
+        const { createApp } = Vue;
         createApp({
-            setup() {
-                const dogUrl: ref(''),
-                const loading: false
-
+            data() {
+                return {
+                    dogUrl: '',
+                    loading: false
                 };
             },
-            async mounted(){
+            methods mounted(){
                 const dogUrl = fetch('https://dog.ceo/api/breeds/image/random');
             }
         })
