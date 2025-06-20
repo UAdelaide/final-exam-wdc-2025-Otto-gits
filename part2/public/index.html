@@ -59,7 +59,8 @@
         const allDogs = ref([]);
         async function getAllDogs() {
           try {
-            const res = await fetch('/api/user/allDogs'
+            const res = await fetch('/api/user/allDogs')
+            allDogs.value = await res.json();
           } catch (error) {
             console.error(error);
           }
