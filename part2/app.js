@@ -19,10 +19,12 @@ app.use(session({
 const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
 
+app.use(express.urlencoded({ extended: true }));
+
+
 app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
 
-app.use(express.urlencoded({ extended: true }));
 
 // Export the app instead of listening here
 module.exports = app;
