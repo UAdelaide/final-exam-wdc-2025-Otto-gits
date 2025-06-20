@@ -2,11 +2,10 @@ const express = require('express');
 const router = express.Router();
 const db = require('../models/db');
 const session = require('express-session');
-app.use(session({
-  secret: 'demo-secret',      // change for real projects
-  resave: false,
-  saveUninitialized: false
-}));
+
+
+
+
 
 // GET all users (for admin/testing)
 router.get('/', async (req, res) => {
