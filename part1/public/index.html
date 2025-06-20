@@ -12,7 +12,7 @@
         <button type=button @click="getDog" :disabled="loading">
             {{ loading ? 'Fetching…' : 'Get Dog' }}
         </button>
-        <img v-if="dogUrl" :src="dogUrl" alt="dog of the day">
+        <img :src="dogUrl" alt="dog of the day">
     </div>
     <script>
         const { createApp } = Vue;
