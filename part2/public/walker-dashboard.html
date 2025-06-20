@@ -49,11 +49,9 @@
         const user = ref('');
 
         async function getCurrentUser() {
-          try {
-            const res = await fetch('/api/users/me');
-            if (!res.ok) throw new Error('Failed to fetch user data');
-            return await res.json();
-
+          const res = await fetch('/api/users/me');
+          if (!res.ok) throw new Error('Failed to fetch user data');
+          return await res.json();
         }
 
         async function loadWalkRequests() {
