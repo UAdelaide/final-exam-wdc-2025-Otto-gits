@@ -38,7 +38,8 @@ router.get('/walkers/summary', async (req, res) => {
     const [rows] = await db.query(`
         SELECT
         u.username AS walker_username,
-        AVG(ra.rating) AS average_rating,
+        COUNT(r.rating) AS average_rating,
+
         `);
     res.json(rows);
 });
