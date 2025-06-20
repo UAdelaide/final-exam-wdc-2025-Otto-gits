@@ -79,7 +79,7 @@ router.get('/dogs/mine', async (req, res) => {
     WHERE owner_id = ?
   `, [req.session.userId]);
   res.json(rows[0]);
-}
+});
 
 
 module.exports = router;
