@@ -50,8 +50,7 @@ router.post('/login', async (req, res) => {
     }
     // if the user exists, set the session and redirect based on role
     const user = rows[0];
-    req.session.userId = user.user_id;
-    req.session.role = user.role;
+    req.session.user = { user_id: user.user_id, username: user.username, role: user.role };
     // redirect based on role
 
     if (user.role === 'walker') {
