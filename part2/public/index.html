@@ -71,7 +71,7 @@
             await Promise.all(allDogs.value.map(async (dog) => {
               try{
                 const resp = await fetch(`https://dog.ceo/api/breeds/image/random`);
-                const data = await response.json();
+                const data = await resp.json();
                 dog.photo = data.message;
               } catch (error){
                 console.error(error);
