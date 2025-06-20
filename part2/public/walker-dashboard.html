@@ -85,7 +85,7 @@
         }
 
         onMounted(async () => {
-          loadWalkRequests();
+          [user.value] = await Promise.all([getCurrentUser(), loadWalkRequests()]);
         });
 
         return {
