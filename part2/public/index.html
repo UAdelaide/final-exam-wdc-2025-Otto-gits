@@ -57,12 +57,13 @@
     createApp({
       setup() {
         const allDogs = ref([]);
+        const dogImages = ref([]);
         async function getAllDogs() {
           try {
             const res = await fetch('/api/user/allDogs')
             allDogs.value = await res.json();
             for(int i = 0; i < allDogs.value.length; i++){
-              
+              dog
             }
           } catch (error) {
             console.error(error);
