@@ -6,13 +6,13 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
 </head>
 
-<body> 
+<body>
     <div id="app">
         <h1>Dog of The Day</h1>
         <button type=button @click="getDog" :disabled="loading">
             {{ loading ? 'Fetching…' : 'Get Dog' }}
         </button>
-        <img src="dogUrl" v-if="dogUrl" :src="dogUrl" alt="dog of the day">
+        <img src="e" v-if="dogUrl" :src="dogUrl" alt="dog of the day">
     </div>
 </body>
 </html>
