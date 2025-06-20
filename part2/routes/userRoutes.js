@@ -91,8 +91,6 @@ router.get('/allDogs', async (req, res) => {
         d.size,
         d.owner_id,
         FROM Dogs d
-        JOIN Users u
-        ON d.owner_id = u.user_id
         `);
     res.json(rows);
 });
