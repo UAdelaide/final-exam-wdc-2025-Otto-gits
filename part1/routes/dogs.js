@@ -10,6 +10,7 @@ router.get('/dogs', async (req, res) => {
 
 router.get('/walkrequests/open', async (req, res) => {
     const [rows] = await db.query('')
+    res.json(rows);
 });
 
 module.exports = router;
