@@ -6,9 +6,9 @@ var db = require('../db');
 router.get('/dogs', async (req, res) => {
     const [rows] = await db.query(`
         SELECT
-        d.name,
+        d.name  AS dog_name,
         d.size,
-        u.username
+        u.username AS owner_username
         FROM Dogs d
         JOIN Users u
         ON d.owner_id = u.user_id
