@@ -52,8 +52,7 @@ router.get('/walkers/summary', async (req, res) => {
             ON r.request_id = wr.request_id
             AND r.walker_id = u.user_id
         WHERE u.role = 'walker'
-        GROUP BY u.user
-
+        GROUP BY u.user_id
         `);
     res.json(rows);
 });
