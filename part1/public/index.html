@@ -6,9 +6,9 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
 </head>
 
-<body>
-
-    <div id="app"><h1>Dog of The Day</h1>
+<body> 
+    <div id="app">
+        <h1>Dog of The Day</h1>
         <button type=button @click="getDog" :disabled="loading">
             {{ loading ? 'Fetching…' : 'Get Dog' }}
         </button>
