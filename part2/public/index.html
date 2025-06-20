@@ -66,9 +66,8 @@
               try{
                 const resp = await fetch(`https://dog.ceo/api/breeds/image/random`);
                 const data = await response.json();
-                this.dogUrl = data.message;
+                dog.photo = data.message;
               }
-              dogImages.value.push(await fetch('https://dog.ceo/api/breeds/image/random'));
             }
           } catch (error) {
             console.error(error);
