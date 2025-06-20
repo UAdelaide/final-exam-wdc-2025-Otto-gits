@@ -38,7 +38,7 @@ router.get('/walkers/summary', async (req, res) => {
     const [rows] = await db.query(`
         SELECT
         u.username AS walker_username,
-        COUNT(ra)
+        COUNT(ra.rating) AS total_ratings,)
         `);
     res.json(rows);
 });
