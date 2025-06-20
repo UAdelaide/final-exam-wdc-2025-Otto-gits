@@ -39,7 +39,7 @@ router.post('/login', async (req, res) => {
   // get the username and password from the request body
   const { username, password } = req.body;
   try {
-    //
+    // get the user from the database
     const [rows] = await db.query(`
       SELECT user_id, username, role FROM Users
       WHERE username = ? AND password_hash = ?
@@ -48,6 +48,7 @@ router.post('/login', async (req, res) => {
     if (rows.length === 0) {
       return res.status(401).json({ error: 'Invalid credentials' });
     }
+    // if the user exists, set the session and redirect based on role
     const user = rows[0];
     req.session.userId = user.user_id;
     req.session.role = user.role;
