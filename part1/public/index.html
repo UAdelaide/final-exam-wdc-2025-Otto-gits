@@ -21,6 +21,7 @@
         <button type=button @click="getDog" :disabled="loading" v-if="!dogUrl">
             {{ loading ? 'Fetching…' : 'Get Dog' }}
         </button>
+        <button 
         <img :src="dogUrl" alt="dog of the day">
     </div>
     <script>
