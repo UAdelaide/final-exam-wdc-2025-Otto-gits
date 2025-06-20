@@ -57,7 +57,7 @@
     createApp({
       setup() {
         const allDogs = ref([]);
-        const dogImages = ref([]);
+        
         async function getAllDogs() {
           try {
             const res = await fetch('/api/user/allDogs')
