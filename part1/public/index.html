@@ -9,10 +9,10 @@
 <body>
     <h1>Dog of The Day</h1>
     <div id="app">
-        <button @click="getDog" :disabled="loading">
+        <button type=button @click="getDog" :disabled="loading">
             {{ loading ? 'Fetching…' : 'Get Dog' }}
         </button>
-        <img v-if="dogUrl" :src="dogUrl" alt="dog of the day">
+        <img src="dogUrl" v-if="dogUrl" :src="dogUrl" alt="dog of the day">
     </div>
 </body>
 </html>
