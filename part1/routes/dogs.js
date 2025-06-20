@@ -3,4 +3,4 @@ var router = express.Router();
 var db = require('../db');
 
 
-router.get('/dogs', async)
+router.get('/dogs', async (req, res) =>)
