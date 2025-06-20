@@ -18,7 +18,7 @@
         <h1>Dog of The Day</h1>
         <img src="https://www.icegif.com/wp-content/uploads/2023/10/icegif-748.gif" alt="CLICK THE BUTTON">
         <hr>
-        <button type=button @click="getDog" :disabled="loading">
+        <button type=button @click="getDog" :disabled="loading" v-if="!dogUrl">
             {{ loading ? 'Fetching…' : 'Get Dog' }}
         </button>
         <img :src="dogUrl" alt="dog of the day">
