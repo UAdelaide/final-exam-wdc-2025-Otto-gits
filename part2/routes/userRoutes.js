@@ -70,5 +70,7 @@ router.post('/logout', (req, res) => {
   return res.redirect('/');
 });
 
+router.get('/dogs/mine', async (req, res) 
+
 
 module.exports = router;
