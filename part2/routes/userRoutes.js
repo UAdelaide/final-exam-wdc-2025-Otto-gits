@@ -89,7 +89,7 @@ router.get('/allDogs', async (req, res) => {
         d.dog_id,
         d.name,
         d.size,
-        d.owner_id,
+        d.owner_id
         FROM Dogs d
         `);
     res.json(rows);
