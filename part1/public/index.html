@@ -26,9 +26,9 @@
             methods:
             async getDog(){
                 this.loading = true;
-                const
-                dogUrl = fetch('https://dog.ceo/api/breeds/image/random');
-            }
+                const response = await fetch('https://dog.ceo/api/breeds/image/random');
+                const data = await response.json();
+                this.dogUrl = data.message;
         })
 
     </script>
