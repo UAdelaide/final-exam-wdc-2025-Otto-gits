@@ -12,7 +12,7 @@
         <button @click="getDog" :disabled="loading">
             {{ loading ? 'Fetching…' : 'Get Dog' }}
         </button>
-        <img v-if="dogUrl" :src="dogUrl" alt="Random dog photo">
+        <img v-if="dogUrl" :src="dogUrl" alt="dog of the day">
     </div>
 </body>
 </html>
