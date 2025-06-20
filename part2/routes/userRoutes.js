@@ -50,10 +50,10 @@ router.post('/login', async (req, res) => {
     const user = rows[0];
     req.session.userId = user.user_id;
     req.session.role = user.role;
-    
-    if (rows[3] === 'walker'){
-      window.location.href = '/walker-dashboard.html';
-    }else if (rows[3] === 'owner'){
+
+    if (user.role === 'walker') {
+      return res.redirect('/walker-dashboard.html');
+    }else if (user.role === 'owner'){
       window.location.href = '/owner-dashboard.html';
     }
 
